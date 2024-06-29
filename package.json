@@ -1,0 +1,42 @@
+{
+	"name": "aeki-front",
+	"version": "3.1.2",
+	"description": "",
+	"homepage": "https://aeki.fi",
+	"bugs": "https://github.com/timoanttila/aeki/issues",
+	"author": {
+		"name": "Timo Anttila",
+		"email": "moro@tuspe.com",
+		"url": "https://timoanttila.com"
+	},
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-cloudflare": "^2.3.3",
+		"@sveltejs/kit": "^1.25.1",
+		"@zerodevx/svelte-toast": "^0.9.5",
+		"autoprefixer": "^10.4.16",
+		"daisyui": "^3.9.2",
+		"dayjs": "^1.11.10",
+		"eslint": "^8.51.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-svelte": "^2.34.0",
+		"lucide-svelte": "^0.284.0",
+		"postcss": "^8.4.31",
+		"prettier": "^3.0.3",
+		"svelte": "^4.2.1",
+		"svelte-check": "^3.5.2",
+		"tailwindcss": "^3.3.3",
+		"typescript": "^5.2.2",
+		"vite": "^4.4.11"
+	},
+	"type": "module"
+}

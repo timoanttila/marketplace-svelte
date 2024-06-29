@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	a,
+	button,
+	select,
+  summary {
+		@apply cursor-pointer;
+	}
+
+  details li + li {
+    @apply mt-2;
+  }
+
+  body {
+    @apply m-0;
+  }
+
+  details form {
+    @apply mt-6;
+  }
+
+  main a {
+    @apply text-primary;
+  }
+
+  strong {
+    @apply font-bold;
+  }
+
+  ol,
+  ul {
+    padding-left: 18px;
+  }
+
+  p:first-child,
+  ol:first-child,
+  ul:first-child {
+    @apply mt-0;
+  }
+
+  p {
+    @apply mb-0;
+  }
+
+  p+p {
+    @apply mt-4;
+  }
+}
+
+@layer components {
+  #captionGradient {
+    background: linear-gradient(180deg,rgba(0,0,0,.87),rgba(15,23,42,.2) 100px,rgba(15,23,42,.6));
+  }
+
+  #head a {
+    @apply no-underline text-white;
+  }
+
+  #userButtons a {
+    @apply border border-solid border-gray-600;
+  }
+
+  #userButtons a:not(.btn-primary) {
+    @apply bg-white;
+  }
+
+  .container {
+    @apply max-w-screen-lg mx-auto px-4;
+  }
+
+  .font-content {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  .font-title {
+    font-size: clamp(1.8rem, 2.4rem, 8vw);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .text-normal {
+    font-size: 1rem;
+  }
+}
+
+* {
+	box-sizing: border-box
+}
+
+@font-face {
+  font-family: 'Josefin Sans', sans-serif;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url('/fonts/JosefinSans-Light.woff2') format('woff2'), url('/fonts/JosefinSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media screen and (min-width:1100px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width:1100px) and (min-width:840px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width:840px) and (min-width:560px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:551px) {
+  main {
+    padding-top: 60px;
+  }
+
+  #head .content {
+    height: 60px;
+    justify-content: space-between;
+  }
+
+  #hero {
+    height: 440px;
+  }
+
+  #menu-toggler {
+    display: none;
+  }
+}
+
+@media screen and (max-width:550px) {
+  main {
+    padding-top: 48px;
+  }
+
+  #hero {
+    height: 550px;
+  }
+
+  #menu:not(.active) {
+    display: none;
+  }
+
+  #menu {
+    left: 0;
+    margin-top: 8px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+
+  #menu li {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
+  }
+
+  #site-brand {
+    padding-top: 4px;
+  }
+}
+
+@media screen and (min-width:561px) {
+  #frontActionButtons button {
+    width: 160px;
+  }
+
+  #frontActionButtons button + button {
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width:560px) {
+  #frontActionButtons button {
+    width: 100%;
+  }
+
+  #frontActionButtons button + button {
+    margin-top: 0.5rem;
+  }
+}
